@@ -5,4 +5,8 @@ $(document).ready(function() {
     }, function() {
         $(this).css("box-shadow", "None");
     });
+    $(".card").on("click", function() {
+        category = $(this).text();
+        alert(category);
+    });
 })
