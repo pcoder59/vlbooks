@@ -6,8 +6,8 @@ Vue.component('category-selected', {
                 <img src="/Images/Books/">
             </div>
             <div class="media-body">
-                <h2 class="media-heading"></h2>
-                <p></p>
+                <h2 class="media-heading">Test</h2>
+                <p>Test</p>
             </div>
         </div>
     </article>
@@ -16,7 +16,7 @@ Vue.component('category-selected', {
 
 Vue.component('category-display', {
     template: `
-    <section>
+    <section class="container">
         <category-selected></category-selected>
     </section>
     `
