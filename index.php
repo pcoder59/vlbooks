@@ -16,5 +16,6 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" type="text/javascript"></script>
     <!--<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>-->
     <script src="js/script.js" type="text/javascript"></script>
+    <script src="js/jq-script.js"></script>
 </body>
 </html>
