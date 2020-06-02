@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VLBOOKS - We Love Books</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
     <div id="app">
@@ -14,6 +15,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" type="text/javascript"></script>
     <!--<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>-->
-    <script src="js/script.js"></script>
+    <script src="js/script.js" type="text/javascript"></script>
 </body>
 </html>
