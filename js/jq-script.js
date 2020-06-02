@@ -7,6 +7,6 @@ $(document).ready(function() {
     });
     $(".card").on("click", function() {
         category = $(this).text();
-        alert(category);
+
     });
 })
