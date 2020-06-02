@@ -1,3 +1,27 @@
+Vue.component('category-selected', {
+    template: `
+    <article id="selectedCategory">
+        <div class="media">
+            <div class="media-left">
+                <img src="/Images/Books/">
+            </div>
+            <div class="media-body">
+                <h2 class="media-heading"></h2>
+                <p></p>
+            </div>
+        </div>
+    </article>
+    `
+})
+
+Vue.component('category-display', {
+    template: `
+    <section>
+        <category-selected></category-selected>
+    </section>
+    `
+})
+
 Vue.component('categories-columns', {
     template: `
     <section class="card-columns">
