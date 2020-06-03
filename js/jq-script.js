@@ -34,8 +34,9 @@ $(document).ready(function() {
                     }
                     category_display += "</div>" +
                         "</div>";
-                    $("#selectedCategory").append(category_display);
+                    $("#selectedCategory").html(category_display);
                 }
+                $("#cdisplay").css("display", "block");
             }
         });
     });
