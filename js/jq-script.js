@@ -40,4 +40,7 @@ $(document).ready(function() {
             }
         });
     });
+    $("#displayBack").on("click", function() {
+        $("#cdisplay").css("display", "none");
+    });
 })
