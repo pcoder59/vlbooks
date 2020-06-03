@@ -7,6 +7,16 @@ $(document).ready(function() {
     });
     $(".card").on("click", function() {
         category = $(this).text();
-
+        $.ajax({
+            type: "post",
+            url: "/get-category.php",
+            data: {
+                category: category
+            },
+            dataType: "JSON",
+            success: function(response) {
+                alert(response);
+            }
+        });
     });
 })
