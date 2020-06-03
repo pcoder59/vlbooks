@@ -1,3 +1,15 @@
+Vue.component('book-page', {
+    template: `
+    <div>
+        <header class="jumbotron text-center">
+            <h1>VLBOOKS</h1>
+            <p>We Love Books!</p>
+        </header>
+    </div>
+    `,
+    name: 'book-page'
+})
+
 Vue.component('category-selected', {
     template: `
     <article id="selectedCategory">

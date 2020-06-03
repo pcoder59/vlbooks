@@ -26,7 +26,7 @@ $(document).ready(function() {
                         "<img src='/Images/Books/" + bookid + "'>" +
                         "</div>" +
                         "<div class='media-body'>" +
-                        "<h2 class='media-heading'>" + bookname + "</h2>" +
+                        "<a href='/Books/" + bookid + ".html'><h2 class='media-heading'>" + bookname + "</h2></a>" +
                         "<p>By " + author + "</p>" +
                         "<p>Categories: ";
                     for (category in categories) {
