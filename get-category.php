@@ -21,7 +21,7 @@ while($row = $result->fetch_assoc()) {
     $categories = $row['categories'];
     $categories = explode(",", $categories);
 
-    $return_arr = array("bookid" => $bookid,
+    $return_arr[] = array("bookid" => $bookid,
                         "bookname" => $bookname,
                         "author" => $author,
                         "categories" => $categories);

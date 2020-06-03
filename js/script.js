@@ -1,15 +1,7 @@
 Vue.component('category-selected', {
     template: `
     <article id="selectedCategory">
-        <div class="media">
-            <div class="media-left">
-                <img src="/Images/Books/">
-            </div>
-            <div class="media-body">
-                <h2 class="media-heading">Test</h2>
-                <p>Test</p>
-            </div>
-        </div>
+        
     </article>
     `
 })

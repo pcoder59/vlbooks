@@ -15,7 +15,27 @@ $(document).ready(function() {
             },
             dataType: "JSON",
             success: function(response) {
-                alert(response);
+                len = response.length;
+                for (i = 0; i < len; i++) {
+                    bookid = response[i].bookid;
+                    bookname = response[i].bookname;
+                    author = response[i].author;
+                    categories = response[i].categories;
+                    category_display = "<div class='media'>" +
+                        "<div class='media-left'>" +
+                        "<img src='/Images/Books/" + bookid + "'>" +
+                        "</div>" +
+                        "<div class='media-body'>" +
+                        "<h2 class='media-heading'>" + bookname + "</h2>" +
+                        "<p>By " + author + "</p>" +
+                        "<p>Categories: ";
+                    for (category in categories) {
+                        category_display += categories[category] + " ";
+                    }
+                    category_display += "</div>" +
+                        "</div>";
+                    $("#selectedCategory").append(category_display);
+                }
             }
         });
     });
