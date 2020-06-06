@@ -65,10 +65,7 @@ Vue.component('categories-columns', {
 Vue.component('header-section', {
     template: `
     <div>
-        <header class="jumbotron text-center">
-            <h1>VLBOOKS</h1>
-            <p>We Love Books!</p>
-        </header>
+        <book-page></book-page>
         <categories-columns></categories-columns>
     </div>
     `
