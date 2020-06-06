@@ -42,6 +42,13 @@ $(document).ready(function() {
                         "</div>";
                     $("#selectedCategory").html(category_display);
                 }
+                display_article = "<div>";
+                article = article.split("\r");
+                for (i = 0; i < article.length; i++) {
+                    display_article += "<p>" + article[i] + "</p>";
+                }
+                display_article += "</div>";
+                $("#selectedCategory").append(display_article);
             }
         }
     });
