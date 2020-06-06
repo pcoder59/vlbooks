@@ -15,26 +15,33 @@ $(document).ready(function() {
             },
             dataType: "JSON",
             success: function(response) {
-                len = response.length;
-                for (i = 0; i < len; i++) {
-                    bookid = response[i].bookid;
-                    bookname = response[i].bookname;
-                    author = response[i].author;
-                    categories = response[i].categories;
-                    category_display = "<div class='media'>" +
-                        "<div class='media-left'>" +
-                        "<img src='/Images/Books/" + bookid + "'>" +
-                        "</div>" +
-                        "<div class='media-body'>" +
-                        "<a href='/Books/book.html?bookid=" + bookid + "'><h2 class='media-heading'>" + bookname + "</h2></a>" +
-                        "<p>By " + author + "</p>" +
-                        "<p>Categories: ";
-                    for (category in categories) {
-                        category_display += categories[category] + " ";
-                    }
-                    category_display += "</div>" +
+                if (response == "0") {
+                    category_display = "<div class='alert alert-danger text-center'>" +
+                        "<p>Sorry No Books in this Category Yet!</p>" +
                         "</div>";
                     $("#selectedCategory").html(category_display);
+                } else {
+                    len = response.length;
+                    for (i = 0; i < len; i++) {
+                        bookid = response[i].bookid;
+                        bookname = response[i].bookname;
+                        author = response[i].author;
+                        categories = response[i].categories;
+                        category_display = "<div class='media'>" +
+                            "<div class='media-left'>" +
+                            "<img src='/Images/Books/" + bookid + "'>" +
+                            "</div>" +
+                            "<div class='media-body'>" +
+                            "<a href='/Books/book.html?bookid=" + bookid + "'><h2 class='media-heading'>" + bookname + "</h2></a>" +
+                            "<p>By " + author + "</p>" +
+                            "<p>Categories: ";
+                        for (category in categories) {
+                            category_display += categories[category] + " ";
+                        }
+                        category_display += "</div>" +
+                            "</div>";
+                        $("#selectedCategory").html(category_display);
+                    }
                 }
                 $("#cdisplay").css("display", "block");
             }

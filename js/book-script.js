@@ -11,7 +11,38 @@ $(document).ready(function() {
         },
         dataType: "JSON",
         success: function(response) {
-
+            if (response == "0") {
+                category_display = "<div class='alert alert-danger text-center'>" +
+                    "<p>Sorry Something Went Wrong!</p>" +
+                    "</div>";
+                $("#selectedCategory").html(category_display);
+            } else {
+                len = response.length;
+                for (i = 0; i < len; i++) {
+                    article = response[i].article;
+                    bookname = response[i].bookname;
+                    author = response[i].author;
+                    categories = response[i].categories;
+                    publisher = response[i].publisher;
+                    published = response[i].published;
+                    category_display = "<div class='media'>" +
+                        "<div class='media-left'>" +
+                        "<img src='/Images/Books/" + bookid + "'>" +
+                        "</div>" +
+                        "<div class='media-body'>" +
+                        "<h2 class='media-heading'>" + bookname + "</h2>" +
+                        "<p>By " + author + "</p>" +
+                        "<p>Publisher: " + publisher + "</p>" +
+                        "<p>Published On: " + published + "</p>" +
+                        "<p>Categories: ";
+                    for (category in categories) {
+                        category_display += categories[category] + " ";
+                    }
+                    category_display += "</div>" +
+                        "</div>";
+                    $("#selectedCategory").html(category_display);
+                }
+            }
         }
     });
 })
