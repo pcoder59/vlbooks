@@ -9,7 +9,7 @@ $(document).ready(function() {
         category = $(this).text();
         $.ajax({
             type: "post",
-            url: "/get-category.php",
+            url: "/vlbooks/get-category.php",
             data: {
                 category: category
             },
@@ -29,10 +29,10 @@ $(document).ready(function() {
                         categories = response[i].categories;
                         category_display = "<div class='media'>" +
                             "<div class='media-left'>" +
-                            "<img src='/Images/Books/" + bookid + "'>" +
+                            "<img src='/vlbooks/Images/Books/" + bookid + "'>" +
                             "</div>" +
                             "<div class='media-body'>" +
-                            "<a href='/Books/book.html?bookid=" + bookid + "'><h2 class='media-heading'>" + bookname + "</h2></a>" +
+                            "<a href='/vlbooks/Books/book.html?bookid=" + bookid + "'><h2 class='media-heading'>" + bookname + "</h2></a>" +
                             "<p>By " + author + "</p>" +
                             "<p>Categories: ";
                         for (category in categories) {
