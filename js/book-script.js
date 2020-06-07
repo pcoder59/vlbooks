@@ -27,7 +27,7 @@ $(document).ready(function() {
                     published = response[i].published;
                     category_display = "<div class='media'>" +
                         "<div class='media-left'>" +
-                        "<img src='/vlbooks/Images/Books/" + bookid + "'>" +
+                        "<img src='../Images/Books/" + bookid + "'>" +
                         "</div>" +
                         "<div class='media-body'>" +
                         "<h2 class='media-heading'>" + bookname + "</h2>" +
