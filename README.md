@@ -1,6 +1,3 @@
 # vlbooks
-Code Base For My Books Website to go hand in hand with a YouTube Channel
+Code Base For My old books page. Incomplete and no longer hosted
 
-Website hosted at vlbooks.premrajr.com
-
-Work in progress... please contribute if you can
